@@ -6,7 +6,6 @@ Group: 		Monitoring
 Url:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
 License: 	BSD
 Source: 	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
-Buildroot: 	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:	libpcap-devel ncurses-devel
 
 %description
