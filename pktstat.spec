@@ -1,12 +1,12 @@
 Summary: 	Displays a live list of active connections and what files are being transferred
 Name: 		pktstat
 Version:	1.8.4
-Release:	%mkrel 4
+Release:	%mkrel 5
 Group: 		Monitoring
 Url:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
 License: 	BSD
 Source: 	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
-Buildroot: 	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libpcap-devel ncurses-devel
 
 %description
