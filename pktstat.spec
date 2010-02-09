@@ -6,6 +6,7 @@ Group: 		Monitoring
 Url:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
 License: 	BSD
 Source: 	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
+Patch0:		pktstat_main_format_string.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libpcap-devel ncurses-devel
 
@@ -18,6 +19,7 @@ can see what just happened. Also accepts filter expressions.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
