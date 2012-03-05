@@ -1,13 +1,11 @@
 Summary: 	Displays a live list of active connections and what files are being transferred
 Name: 		pktstat
-Version:	1.8.4
-Release:	%mkrel 7
+Version:	1.8.5
+Release:	1
 Group: 		Monitoring
 Url:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
 License: 	BSD
-Source: 	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
-Patch0:		pktstat_main_format_string.patch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Source0: 	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
 BuildRequires:	libpcap-devel ncurses-devel
 
 %description
@@ -19,21 +17,15 @@ can see what just happened. Also accepts filter expressions.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
-%clean
-rm -r $RPM_BUILD_ROOT
-
 %files
-%defattr(-,root,root)
 %doc COPYING NEWS README
 %{_bindir}/pktstat
 %{_mandir}/man1/pktstat*
