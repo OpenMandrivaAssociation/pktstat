@@ -3,7 +3,7 @@ Name: 		pktstat
 Version:	1.8.5
 Release:	2
 Group: 		Monitoring
-Url:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
+Url:		https://www.adaptive-enterprises.com.au/~d/software/pktstat/
 License: 	BSD
 Source0: 	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
 BuildRequires:	libpcap-devel ncurses-devel
